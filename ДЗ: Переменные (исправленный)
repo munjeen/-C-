@@ -1,0 +1,31 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+             int age = 10;
+             float number = 10.5f;
+             double number1 = 10.5; 
+             bool doorIsOpen = true;
+             string academicSubject = "physics";
+             int money = 2000;
+             string animal =  "lion";
+             float divisionNumbers = 1.0f;
+             int area = 51;
+             string condition = "im tired";
+
+            Console.WriteLine(age);
+            Console.WriteLine(number);
+            Console.WriteLine(number1);
+            Console.WriteLine(doorIsOpen);
+            Console.WriteLine(academicSubject);
+            Console.WriteLine(animal);
+            Console.WriteLine(divisionNumbers);
+            Console.WriteLine(area);
+            Console.WriteLine(condition);
+        }
+    }
+}
