@@ -1,0 +1,20 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите количестов людей, стоящих в очереди:");
+            int numberOfPeople = Convert.ToInt32(Console.ReadLine());
+
+            int receptionTime = 10;
+            int totalMinutes = numberOfPeople * receptionTime;
+            int hours = totalMinutes / 60;
+            int minutes = totalMinutes % 60;
+
+            Console.WriteLine($"Время в очереди, которое вам придется отстоять - {hours} часов и {minutes} минут");
+        }
+    }
+}
