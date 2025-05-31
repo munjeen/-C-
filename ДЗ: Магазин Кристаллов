@@ -1,0 +1,26 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите количестов монет, которое у вас есть:");
+            int coins = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("В нашем магазине АКЦИЯ!!! Все кристаллы по одной цене - 10 монет за штуку. Успейте купить!");
+            int price = 10;
+
+            Console.WriteLine("Введите количество кристаллов, которое вам нужно");
+            int quantity = Convert.ToInt32(Console.ReadLine());
+            
+            int finalPrice = price * quantity;
+            Console.WriteLine($"Итого с Вас {finalPrice} монет за {quantity} кристаллов.");
+            Console.WriteLine("Спасибо за покупку, товарищ, приходите к нам ещё! Мы всегда рады приветствовать вас!!!");
+
+            int theRestMoney = coins - finalPrice;
+            Console.WriteLine($"Добавлено в инвентарь {quantity} кристаллов. У вас осталось {theRestMoney} монет.");
+        }
+    }
+}
