@@ -1,0 +1,57 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "Ivan";
+            string surname = "Ivanov";
+            Console.WriteLine($"{name} {surname}");
+
+            string change = name;
+            name = surname;
+            surname = change;
+            Console.WriteLine($"{name} {surname}");
+            
+            string cup1 = "кофе";
+            string cup2 = "чай";
+            Console.WriteLine($"{cup1} {cup2}");
+
+            string change1 = cup1;
+            cup1 = cup2;
+            cup2 = change1;
+            Console.WriteLine($"{cup1} {cup2}");
+
+        }
+    }
+}using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "Ivan";
+            string surname = "Ivanov";
+            Console.WriteLine($"{name} {surname}");
+
+            string change = name;
+            name = surname;
+            surname = change;
+            Console.WriteLine($"{name} {surname}");
+            
+            string cup1 = "кофе";
+            string cup2 = "чай";
+            Console.WriteLine($"{cup1} {cup2}");
+
+            string change1 = cup1;
+            cup1 = cup2;
+            cup2 = change1;
+            Console.WriteLine($"{cup1} {cup2}");
+
+        }
+    }
+}
