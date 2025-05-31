@@ -1,0 +1,25 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Здравствуйте, Вы попали в ресторан французской кухни Cloude Mone.");
+            Console.WriteLine("Здравствуйте");
+            Console.WriteLine("На сколько персон вы бы хотели забронировать столик?");
+            Console.WriteLine("Введите ответ");
+            string answer = Console.ReadLine();
+            Console.WriteLine($"Хорошо, проходите в зал. Как зайдёте, справа будет ваш столик на {answer} персон");
+            Console.WriteLine("Добрый вечер, сегодня я буду вашим официантом, что бы вы хотели заказать?");
+            Console.WriteLine("Перечислите все, что вы хотите заказать");
+            string order = Console.ReadLine();
+            Console.WriteLine("Отличный выбор. Есть ли у вас какие-либо особые пожелания?");
+            Console.WriteLine("Введите ваши пожелания (если они отсутствуют, напишите 'нет')");
+            string wisher = Console.ReadLine();
+            Console.WriteLine($"Прекрасно! Позвольте уточнить Ваш заказ {order}. Особые пожелания - {wisher}. " +
+                $"Благодарим Вас за заказ! Блюда будут готовы в течении 30 минут. А пока распологайтесь и чувствуйте себя как дома!");
+        }
+    }
+}
