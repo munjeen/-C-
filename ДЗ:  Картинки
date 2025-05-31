@@ -1,0 +1,21 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int totalPicture = 52;
+            int row = 3;
+
+            int fullRows = totalPicture / row; // Полностью заполненные ряды
+            int remains = totalPicture % row; // Остаток
+
+            Console.WriteLine($"Количество полностью заполненных рядов {fullRows}." +
+                $" Количество картинок, которые остались {remains}.");
+
+
+        }
+    }
+}
