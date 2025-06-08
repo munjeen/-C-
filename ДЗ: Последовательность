@@ -1,0 +1,18 @@
+using System;
+using System.Security.Cryptography;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int maxNumber = 103;
+
+            for (int i = 5; i <= maxNumber; i += 7)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
