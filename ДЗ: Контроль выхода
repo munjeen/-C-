@@ -1,0 +1,28 @@
+using System;
+using System.Security.Cryptography;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Для выхода из программы введите 'exit' ");
+            
+            while (true)
+            {
+                string userInput = Console.ReadLine();
+
+                if (userInput == "exit")
+                {
+                    Console.WriteLine("Программа завершена!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели неправильное слово для выхода из программы");
+                }
+            }
+        }
+    }
+}
