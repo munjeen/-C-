@@ -7,20 +7,21 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Для выхода из программы введите 'exit' ");
-            
-            while (true)
-            {
-                string userInput = Console.ReadLine();
+            Console.WriteLine("Введите слово для выхода");
+            string exit = "exit";
+            string userInput = "";
 
-                if (userInput == "exit")
+            while (userInput != exit)
+            {
+                userInput = Console.ReadLine();  
+                if (userInput == exit)
                 {
                     Console.WriteLine("Программа завершена!");
-                    break;
                 }
                 else
                 {
                     Console.WriteLine("Вы ввели неправильное слово для выхода из программы");
+                    Console.WriteLine("Введите слово повторно");
                 }
             }
         }
