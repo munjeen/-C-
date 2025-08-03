@@ -1,19 +1,29 @@
+using Microsoft.Win32;
+using System;
+using System.Security.Cryptography;
+
+namespace proga
+{
     internal class Program
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int number = rnd.Next(0, 101);
+            int firstMultiple = 3;
+            int secondMultiple = 5;
+            Random rand = new Random();
+            int number = rand.Next(0, 101);
             Console.WriteLine(number);
 
             int sum = 0;
-            for (int i = 1; i <= number; i++) 
+
+            for (int i = 1; i <= number; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % firstMultiple == 0 || i % secondMultiple == 0)
                 {
                     sum += i;
                 }
             }
+
             Console.WriteLine($"Сумма чисел до {number} включительно: {sum}");
         }
     }
