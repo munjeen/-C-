@@ -6,7 +6,7 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            int maxRandomNumber = 100 + 1;
+            int maxRandomNumber = 102;
             int firstMultiple = 3;
             int secondMultiple = 5;
             Random random = new Random();
