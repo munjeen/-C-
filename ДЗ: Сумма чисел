@@ -6,11 +6,11 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            int highRandomNumber = 101;
+            int maxRandomNumber = 100 + 1;
             int firstMultiple = 3;
             int secondMultiple = 5;
             Random random = new Random();
-            int number = random.Next(0, highRandomNumber);
+            int number = random.Next(0, maxRandomNumber);
             Console.WriteLine(number);
 
             int sum = 0;
