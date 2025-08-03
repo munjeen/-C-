@@ -1,6 +1,4 @@
-using Microsoft.Win32;
 using System;
-using System.Security.Cryptography;
 
 namespace proga
 {
@@ -8,28 +6,32 @@ namespace proga
     {
         static void Main(string[] args)
         {
+            string command_text = "text";
+            string command_random = "random";
+            string command_clear= "clear";  
+            string command_exit = "exit";   
             Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить");
-            Console.WriteLine("1.Вывод разного текста 2.Показать случайное число 3.Очистить консоль 4.Выход.");
+            Console.WriteLine("1.Text output (command_text) 2.Show a random number (command_random) 3.Clear the console (command_clear) 4.Exit (command_exit).");
 
             bool programRunning = true;
             while (programRunning)
             {
-                Console.WriteLine("Введите номер команды");
+                Console.WriteLine("Введите название команды команды");
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
-                    case "1":
+                    case "command_text":
                         Console.WriteLine("Пример вывода текста. Еxample of text output");
                         break;
-                    case "2":
+                    case "command_random":
                         Random rnd = new Random();
                         int number = rnd.Next();
                         Console.WriteLine($"Случайное число {number}");
                         break;
-                    case "3":
+                    case "command_clear":
                         Console.Clear();
                         break;
-                    case "4":
+                    case "command_exit":
                         Environment.Exit(0);
                         break;
                 }
