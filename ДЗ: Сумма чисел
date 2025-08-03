@@ -1,6 +1,4 @@
-using Microsoft.Win32;
 using System;
-using System.Security.Cryptography;
 
 namespace proga
 {
@@ -8,10 +6,11 @@ namespace proga
     {
         static void Main(string[] args)
         {
+            int theEndRandomNumber = 101;
             int firstMultiple = 3;
             int secondMultiple = 5;
-            Random rand = new Random();
-            int number = rand.Next(0, 101);
+            Random random = new Random();
+            int number = random.Next(0, theEndRandomNumber);
             Console.WriteLine(number);
 
             int sum = 0;
