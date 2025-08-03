@@ -1,0 +1,39 @@
+using Microsoft.Win32;
+using System;
+using System.Security.Cryptography;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить");
+            Console.WriteLine("1.Вывод разного текста 2.Показать случайное число 3.Очистить консоль 4.Выход.");
+
+            bool programRunning = true;
+            while (programRunning)
+            {
+                Console.WriteLine("Введите номер команды");
+                string userInput = Console.ReadLine();
+                switch (userInput)
+                {
+                    case "1":
+                        Console.WriteLine("Пример вывода текста. Еxample of text output");
+                        break;
+                    case "2":
+                        Random rnd = new Random();
+                        int number = rnd.Next();
+                        Console.WriteLine($"Случайное число {number}");
+                        break;
+                    case "3":
+                        Console.Clear();
+                        break;
+                    case "4":
+                        Environment.Exit(0);
+                        break;
+                }
+            }
+        }
+    }
+}
