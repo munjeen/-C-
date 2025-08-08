@@ -22,21 +22,21 @@ namespace proga
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
-                    case "СommandText":
+                    case "1":
                         Console.WriteLine("Пример вывода текста. Еxample of text output");
                         break;
 
-                    case "СommandRandom":
-                        Random rand = new Random();
-                        int number = rand.Next();
+                    case "2":
+                        Random random = new Random();
+                        int number = random.Next();
                         Console.WriteLine($"Случайное число {number}");
                         break;
 
-                    case "СommandClear":
+                    case "3":
                         Console.Clear();
                         break;
 
-                    case "СommandExit":
+                    case "4":
                         programRun = false;
                         Console.WriteLine("Завершение работы...");
                         break;
