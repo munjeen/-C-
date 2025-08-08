@@ -6,36 +6,37 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            const string commandText = "1";
-            const string commandRandom = "2";
-            const string commandClear = "3";
-            const string commandExit = "4";
+            const string СommandText = "1";
+            const string СommandRandom = "2";
+            const string СommandClear = "3";
+            const string СommandExit = "4";
 
             Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить. Введите число команды");
-            Console.WriteLine("1.Text output 2.Show a random number  3.Clear the console  4.Exit.");
+            Console.WriteLine("1.CommandText (Показать текст) 2.CommannndRandom (Вывести случайное число) 3.CommandClear (Очистить консоль) 4.CommandExit (Выход).");
 
             bool programRun = true;
             while (programRun)
             {
                 Console.WriteLine("Введите название команды команды");
+
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
-                    case "commandText":
+                    case "СommandText":
                         Console.WriteLine("Пример вывода текста. Еxample of text output");
                         break;
 
-                    case "commandRandom":
-                        Random rnd = new Random();
-                        int number = rnd.Next();
+                    case "СommandRandom":
+                        Random rand = new Random();
+                        int number = rand.Next();
                         Console.WriteLine($"Случайное число {number}");
                         break;
 
-                    case "commandClear":
+                    case "СommandClear":
                         Console.Clear();
                         break;
 
-                    case "commandExit":
+                    case "СommandExit":
                         programRun = false;
                         Console.WriteLine("Завершение работы...");
                         break;
