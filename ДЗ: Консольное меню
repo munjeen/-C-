@@ -6,12 +6,12 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            string command_text = "text";
-            string command_random = "random";
-            string command_clear= "clear";  
-            string command_exit = "exit";   
+            string commandText = "text";
+            string commandRandom = "random";
+            string commandClear = "clear";
+            string commandExit = "exit";
             Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить");
-            Console.WriteLine("1.Text output (command_text) 2.Show a random number (command_random) 3.Clear the console (command_clear) 4.Exit (command_exit).");
+            Console.WriteLine("1.Text output (commandText) 2.Show a random number (commandRandom) 3.Clear the console (commandClear) 4.Exit (commandExit).");
 
             bool programRunning = true;
             while (programRunning)
@@ -20,19 +20,23 @@ namespace proga
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
-                    case "command_text":
+                    case "commandText":
                         Console.WriteLine("Пример вывода текста. Еxample of text output");
                         break;
-                    case "command_random":
+
+                    case "commandRandom":
                         Random rnd = new Random();
                         int number = rnd.Next();
                         Console.WriteLine($"Случайное число {number}");
                         break;
-                    case "command_clear":
+
+                    case "commandClear":
                         Console.Clear();
                         break;
-                    case "command_exit":
-                        Environment.Exit(0);
+
+                    case "commandExit":
+                        programRunning = false;
+                        Console.WriteLine("Завершение работы...");
                         break;
                 }
             }
