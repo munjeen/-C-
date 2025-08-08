@@ -1,0 +1,215 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Добро пожаловать в конвертёр валют! Введите количестов денег, которое у вас есть.");
+
+            double countRubles = Convert.ToInt32(Console.ReadLine());   
+            double countUsd = Convert.ToInt32(Console.ReadLine());   
+            double countEuro = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Ваш текущий баланс составляет: \n{countRubles} рублей \n{countUsd} долларов \n{countEuro} евро");
+
+            double rubToUsd = 0.013;
+            double rubToEur = 0.011;
+
+            double usdToRub = 79.78;
+            double usdToEur = 0.858;
+
+            double eurToRub = 92.88;
+            double eurToUsd = 1.17;
+
+            const string CommandRubToUsd = "1";
+            const string CommandRubToEur = "2";
+
+            const string CommandUsdToRub = "3";
+            const string CommandUsdToEur = "4";
+
+            const string CommandEurToRub = "5";
+            const string CommandEurToUsd = "6";
+
+            const string CommandExit = "7";
+
+            bool isConvertRun = true;
+
+            while (isConvertRun)
+            {
+                Console.WriteLine($"Введите номер команды, который Вы хотите выполнить. \n{CommandRubToUsd}. Обмен рублей на доллары" +
+                    $"\n{CommandRubToEur}. Обмен рублей на евро \n{CommandUsdToRub}. Обмен долларов на рубли \n{CommandUsdToEur}. Обмен долларов на евро " +
+                    $"\n{CommandEurToRub}. Обмен евро на рубли \n{CommandEurToUsd}. Обмен евро на доллары \n{CommandExit}.Выход из программы");
+                
+                string userInput = Console.ReadLine();
+
+                switch (userInput)
+                {
+                    case CommandRubToUsd:
+                        Console.WriteLine("Введите сколько рублей вы хотите обменять.");
+
+                        double exchangeRubToUsd = Convert.ToInt32(Console.ReadLine());
+
+                        if (exchangeRubToUsd > countRubles)
+                        {
+                            Console.WriteLine("На вашем счёте недостаточно средств!");
+                            break;
+                        }
+                        if (exchangeRubToUsd <= 0)
+                        {
+                            Console.WriteLine("Сумма должна быть положительной!");
+                            break;
+                        }
+
+                            double remainsRubAfterConvertToUsd = countRubles - exchangeRubToUsd;
+
+                            Console.WriteLine($"Ваш остаток на рублёвом счёте составляет:{remainsRubAfterConvertToUsd} рублей");
+
+                            double convertRubToUsd = exchangeRubToUsd * rubToUsd;
+                            double currentUsdBalance1 = countUsd + convertRubToUsd;
+
+                            Console.WriteLine($"Ваш текущий баланс: \n{currentUsdBalance1} долларов \n{countEuro} евро \n{remainsRubAfterConvertToUsd} рублей");
+                        
+                        break;
+
+                    case CommandRubToEur:
+                        Console.WriteLine("Введите сколько рублей вы хотите обменять.");
+
+                        double exchangeRubToEur = Convert.ToInt32(Console.ReadLine());
+
+                        if (exchangeRubToEur > countRubles)
+                        {
+                            Console.WriteLine("На вашем счёте недостаточно средств!");
+                            break;
+                        }
+                        if (exchangeRubToEur <= 0)
+                        {
+                            Console.WriteLine("Сумма должна быть положительной!");
+                            break;
+                        }
+
+                        double remainsRubAfterConvertToEur = countRubles - exchangeRubToEur;
+
+                        Console.WriteLine($"Ваш остаток на рублёвом счёте составляет:{remainsRubAfterConvertToEur} рублей");
+
+                        double convertRubToEur = exchangeRubToEur * rubToEur;
+                        double currentEurBalance2 = countEuro + convertRubToEur;
+
+                        Console.WriteLine($"Ваш текущий баланс: \n{currentEurBalance2} евро \n{countUsd} долларов \n{remainsRubAfterConvertToEur} ");
+                        break;
+
+                    case CommandUsdToRub:
+                        Console.WriteLine("Введите сколько долларов вы хотите обменять.");
+
+                        double exchangeUsdToRub = Convert.ToInt32(Console.ReadLine());
+
+                        if (exchangeUsdToRub > countRubles)
+                        {
+                            Console.WriteLine("На вашем счёте недостаточно средств!");
+                            break;
+                        }
+                        if (exchangeUsdToRub <= 0)
+                        {
+                            Console.WriteLine("Сумма должна быть положительной!");
+                            break;
+                        }
+
+                        double remainsUsdAfterConvertToRub = countUsd - exchangeUsdToRub;
+
+                        Console.WriteLine($"Ваш остаток на долларовом счёте составляет:{remainsUsdAfterConvertToRub} долларов");
+
+                        double convertUsdToRub = exchangeUsdToRub * usdToRub;
+                        double currentRubBalance3 = countRubles + convertUsdToRub;
+
+                        Console.WriteLine($"Ваш текущий баланс: \n{currentRubBalance3} рублей \n{countEuro} евро \n{remainsUsdAfterConvertToRub} долларов ");
+                        break;
+
+                    case CommandUsdToEur:
+                        Console.WriteLine("Введите сколько долларов вы хотите обменять.");
+
+                        double exchangeUsdToEur = Convert.ToInt32(Console.ReadLine());
+
+                        if (exchangeUsdToEur > countRubles)
+                        {
+                            Console.WriteLine("На вашем счёте недостаточно средств!");
+                            break;
+                        }
+                        if (exchangeUsdToEur <= 0)
+                        {
+                            Console.WriteLine("Сумма должна быть положительной!");
+                            break;
+                        }
+
+                        double remainsUsdAfterConvertToEur = countUsd - exchangeUsdToEur;
+
+                        Console.WriteLine($"Ваш остаток на долларовом счёте составляет:{remainsUsdAfterConvertToEur} долларов");
+
+                        double convertUsdToEur = exchangeUsdToEur * usdToEur;
+                        double currentEurBalance4 = countEuro + convertUsdToEur;
+
+                        Console.WriteLine($"Ваш текущий баланс: \n{currentEurBalance4} евро \n{countRubles} рублей \n{remainsUsdAfterConvertToEur} долларов ");
+                        break;
+
+                    case CommandEurToRub:
+                        Console.WriteLine("Введите сколько долларов вы хотите обменять.");
+
+                        double exchangeEurToRub = Convert.ToInt32(Console.ReadLine());
+
+                        if (exchangeEurToRub > countRubles)
+                        {
+                            Console.WriteLine("На вашем счёте недостаточно средств!");
+                            break;
+                        }
+                        if (exchangeEurToRub <= 0)
+                        {
+                            Console.WriteLine("Сумма должна быть положительной!");
+                            break;
+                        }
+
+                        double remainsEurAfterConvertToRub = countUsd - exchangeEurToRub;
+
+                        Console.WriteLine($"Ваш остаток на евровом счёте составляет:{remainsEurAfterConvertToRub} евро");
+
+                        double convertEurToRub = exchangeEurToRub * eurToRub;
+                        double currentRubBalance5 = countRubles + convertEurToRub;
+
+                        Console.WriteLine($"Ваш текущий баланс: \n{currentRubBalance5} рублей \n{countUsd} долларов \n{remainsEurAfterConvertToRub} евро ");
+                        break;
+
+                    case CommandEurToUsd:
+                        Console.WriteLine("Введите сколько долларов вы хотите обменять.");
+
+                        double exchangeEurToUsd = Convert.ToInt32(Console.ReadLine());
+
+                        if (exchangeEurToUsd > countRubles)
+                        {
+                            Console.WriteLine("На вашем счёте недостаточно средств!");
+                            break;
+                        }
+                        if (exchangeEurToUsd <= 0)
+                        {
+                            Console.WriteLine("Сумма должна быть положительной!");
+                            break;
+                        }
+
+                        double remainsEurAfterConvertToUsd = countUsd - exchangeEurToUsd;
+
+                        Console.WriteLine($"Ваш остаток на евровом счёте составляет:{remainsEurAfterConvertToUsd} евро");
+
+                        double convertEurToUsd = exchangeEurToUsd * eurToUsd;
+                        double currentUsdBalance6 = countUsd + convertEurToUsd;
+
+                        Console.WriteLine($"Ваш текущий баланс: \n{currentUsdBalance6} долларов \n{countUsd} рублей \n{remainsEurAfterConvertToUsd} евро ");
+                        break;
+
+                    case CommandExit:
+                        isConvertRun = false;
+                        Console.WriteLine("Завершение работы! До свидания!");
+                        break;
+
+                }
+            }
+        }
+    }
+}
