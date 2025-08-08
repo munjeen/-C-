@@ -6,37 +6,40 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            const string СommandText = "1";
-            const string СommandRandom = "2";
+            const string СommandOutputText = "1";
+            const string СommandGenerateRandom = "2";
             const string СommandClear = "3";
             const string СommandExit = "4";
 
             Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить. Введите число команды");
-            Console.WriteLine("1.CommandText (Показать текст) 2.CommannndRandom (Вывести случайное число) 3.CommandClear (Очистить консоль) 4.CommandExit (Выход).");
+            Console.WriteLine($"{СommandOutputText}. (Показать текст)  \n" +
+                $"{СommandGenerateRandom}.(Вывести случайное число) \n{СommandClear}. (Очистить консоль) \n{СommandExit}.(Выход).");
 
             bool isProgramRun = true;
+
             while (isProgramRun)
             {
                 Console.WriteLine("Введите название команды команды");
 
                 string userInput = Console.ReadLine();
+
                 switch (userInput)
                 {
-                    case "1":
+                    case СommandOutputText:
                         Console.WriteLine("Пример вывода текста. Еxample of text output");
                         break;
 
-                    case "2":
+                    case СommandGenerateRandom:
                         Random random = new Random();
                         int number = random.Next();
                         Console.WriteLine($"Случайное число {number}");
                         break;
 
-                    case "3":
+                    case СommandClear:
                         Console.Clear();
                         break;
 
-                    case "4":
+                    case СommandExit:
                         isProgramRun = false;
                         Console.WriteLine("Завершение работы...");
                         break;
