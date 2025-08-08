@@ -6,15 +6,16 @@ namespace proga
     {
         static void Main(string[] args)
         {
-            string commandText = "text";
-            string commandRandom = "random";
-            string commandClear = "clear";
-            string commandExit = "exit";
-            Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить");
-            Console.WriteLine("1.Text output (commandText) 2.Show a random number (commandRandom) 3.Clear the console (commandClear) 4.Exit (commandExit).");
+            const string commandText = "1";
+            const string commandRandom = "2";
+            const string commandClear = "3";
+            const string commandExit = "4";
 
-            bool programRunning = true;
-            while (programRunning)
+            Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить. Введите число команды");
+            Console.WriteLine("1.Text output 2.Show a random number  3.Clear the console  4.Exit.");
+
+            bool programRun = true;
+            while (programRun)
             {
                 Console.WriteLine("Введите название команды команды");
                 string userInput = Console.ReadLine();
@@ -35,7 +36,7 @@ namespace proga
                         break;
 
                     case "commandExit":
-                        programRunning = false;
+                        programRun = false;
                         Console.WriteLine("Завершение работы...");
                         break;
                 }
