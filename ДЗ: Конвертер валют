@@ -6,6 +6,17 @@ namespace proga
     {
         static void Main(string[] args)
         {
+            const string CommandRubToUsd = "1";
+            const string CommandRubToEur = "2";
+
+            const string CommandUsdToRub = "3";
+            const string CommandUsdToEur = "4";
+
+            const string CommandEurToRub = "5";
+            const string CommandEurToUsd = "6";
+
+            const string CommandExit = "7";
+
             Console.WriteLine("Добро пожаловать в конвертёр валют! Введите количестов денег, которое у вас есть.");
 
             double countRubles = Convert.ToInt32(Console.ReadLine());   
@@ -22,17 +33,6 @@ namespace proga
 
             double eurToRub = 92.88;
             double eurToUsd = 1.17;
-
-            const string CommandRubToUsd = "1";
-            const string CommandRubToEur = "2";
-
-            const string CommandUsdToRub = "3";
-            const string CommandUsdToEur = "4";
-
-            const string CommandEurToRub = "5";
-            const string CommandEurToUsd = "6";
-
-            const string CommandExit = "7";
 
             bool isConvertRun = true;
 
