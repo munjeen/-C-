@@ -14,8 +14,8 @@ namespace proga
             Console.WriteLine("Доброго времени суток, чем могу быть полезен? Вот команды, которые я могу выполнить. Введите число команды");
             Console.WriteLine("1.CommandText (Показать текст) 2.CommannndRandom (Вывести случайное число) 3.CommandClear (Очистить консоль) 4.CommandExit (Выход).");
 
-            bool programRun = true;
-            while (programRun)
+            bool isProgramRun = true;
+            while (isProgramRun)
             {
                 Console.WriteLine("Введите название команды команды");
 
@@ -37,7 +37,7 @@ namespace proga
                         break;
 
                     case "4":
-                        programRun = false;
+                        isProgramRun = false;
                         Console.WriteLine("Завершение работы...");
                         break;
                 }
