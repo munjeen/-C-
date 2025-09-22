@@ -8,30 +8,24 @@ namespace proga
         {
             Console.WriteLine("Введите символ...");
             string userSymbol = Console.ReadLine();
-
-            Console.WriteLine("Введите своё имя...");
+            Console.WriteLine("Введите имя...");
             string userName = Console.ReadLine();
 
             int nameLenght = userName.Length;
 
-
-            for (int i = 0; i < nameLenght + 2; i++) 
+            string frame = "";
+            for (int i = 0; i < nameLenght + 2; i++)
             {
-                Console.Write(userSymbol);   
+                frame += userSymbol;
             }
-         
-            Console.WriteLine();
 
+            Console.WriteLine(frame);
             Console.Write(userSymbol);
-            Console.Write($"{userName}");
+            Console.Write(userName);
             Console.Write(userSymbol);
-            Console.WriteLine();
 
-            for (int j = 0; j < nameLenght + 2; j++)
-            {
-                Console.Write(userSymbol);
-            }
-            Console.WriteLine();    
+            Console.WriteLine();
+            Console.WriteLine(frame);
         }
     }
 }
