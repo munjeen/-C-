@@ -1,0 +1,34 @@
+using System;
+
+namespace proga
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string correctPassword = "asdf";
+            string secretMessage = "секретное сообщение";
+
+            Console.WriteLine("Введите пароль...");
+            int attempts = 3;
+
+            for (int i = 0; i < attempts; i++)
+            {
+                string userInput = Console.ReadLine();
+                Console.WriteLine();
+
+                if (userInput == correctPassword)
+                {
+                    Console.WriteLine($"Пароль верный. {secretMessage}");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Пароль неверный, пожалуйста, попробуйте ещё раз");
+                }
+            }
+            Console.WriteLine("Превышено количество возможных попыток. Программа завершается.");
+            Environment.Exit(0);
+        }
+    }
+}
